@@ -1,15 +1,21 @@
 import React from 'react'
 import "./style.css"
+
+import Header from "../Header/Header"
+
 import { useDataLayerValue } from "../../context/DataLayer"
-function Footer() {
+function Body( {spotify} ) {
     
     const [{ playlists }, dispatch] = useDataLayerValue()
 
     return (
         <div className="body">
-            <h1> I am the body </h1>
+            <Header 
+            spotify = { spotify }
+            />
+            <h1> Achyuth Reddy </h1>
         </div>
     )
 }
 
-export default Footer
+export default Body
