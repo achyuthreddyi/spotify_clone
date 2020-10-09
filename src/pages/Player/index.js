@@ -4,11 +4,13 @@ import SideBar from "../../components/SideBar"
 import Body from "../../components/Body"
 import Footer from "../../components/Footer"
 
-function index({ spotify }) {
+function index({ spotify, playlists }) {
     return (
         <div className="player">
             <div className = "player__body">
-                <SideBar />
+                <SideBar 
+                
+                />
                 <Body />
                 {/* sidebar  */}
                 {/*  Body  */}

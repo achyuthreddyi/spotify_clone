@@ -3,12 +3,17 @@ import SideBarOption from "../SideBarOption"
 import HomeIcon from "@material-ui/icons/Home"
 import SearchIcon from "@material-ui/icons/Search"
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
+import { useDataLayerValue } from "../../context/DataLayer"
 
 import "./style.css"
 
 
 
 function index() {
+
+    const [{ playlists }, dispatch] = useDataLayerValue()
+    // console.log(" inside the sidebar", playlists);
+
     return (
         <div className="sidebar">
             <img className="sidebar__logo"
