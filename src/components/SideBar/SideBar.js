@@ -1,4 +1,4 @@
-import React from 'react'
+import React   from 'react'
 import SideBarOption from "../SideBarOption"
 import HomeIcon from "@material-ui/icons/Home"
 import SearchIcon from "@material-ui/icons/Search"
@@ -9,10 +9,10 @@ import "./style.css"
 
 
 
-function index() {
+function SideBar() {
 
-    const [{ playlists }, dispatch] = useDataLayerValue()
-    // console.log(" inside the sidebar", playlists);
+    const[{ playlists }, dispatch ] = useDataLayerValue()
+    console.log("Playlists", playlists );
 
     return (
         <div className="sidebar">
@@ -34,4 +34,4 @@ function index() {
     )
 }
 
-export default index
+export default SideBar

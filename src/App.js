@@ -1,7 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import './App.css';
-import Login from "./pages/Login"
-import Player from "./pages/Player"
+
+import Login from "./pages/Login/Login"
+import Player from "./pages/Player/Player"
+
+
 import { getTokenFromUrl } from './spotify';
 import SpotifyWebApi from "spotify-web-api-js"
 import { useDataLayerValue } from "./context/DataLayer"

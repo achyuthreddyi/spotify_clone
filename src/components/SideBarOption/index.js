@@ -1,7 +1,7 @@
 import React from 'react'
 import "./style.css"
 
-function index( { title, Icon }) {
+function SideBarOption( { title, Icon }) {
     return (
         <div className="sideBarOption">
             {Icon && <Icon className = "sideBarOption__icon" />}
@@ -10,4 +10,4 @@ function index( { title, Icon }) {
     )
 }
 
-export default index
+export default SideBarOption

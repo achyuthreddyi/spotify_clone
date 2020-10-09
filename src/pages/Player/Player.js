@@ -1,10 +1,13 @@
 import React from 'react'
 import './style.css'
-import SideBar from "../../components/SideBar"
-import Body from "../../components/Body"
-import Footer from "../../components/Footer"
+import SideBar from "../../components/SideBar/SideBar"
+import Body from "../../components/Body/Body"
+import Footer from "../../components/Footer/Footer"
+import { useDataLayerValue } from "../../context/DataLayer"
 
-function index({ spotify, playlists }) {
+function Player({ spotify }) {
+
+    const [ { playlists } ] = useDataLayerValue()
     return (
         <div className="player">
             <div className = "player__body">
@@ -21,4 +24,4 @@ function index({ spotify, playlists }) {
     )
 }
 
-export default index
+export default Player
