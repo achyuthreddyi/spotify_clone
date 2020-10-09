@@ -1,5 +1,5 @@
 import React   from 'react'
-import SideBarOption from "../SideBarOption"
+import SideBarOption from "../SideBarOption/SideBarOption"
 import HomeIcon from "@material-ui/icons/Home"
 import SearchIcon from "@material-ui/icons/Search"
 import LibraryMusicIcon from "@material-ui/icons/LibraryMusic"
@@ -27,7 +27,8 @@ function SideBar() {
             { playlists?.items?.map(playlist =>(
                 <SideBarOption title={playlist.name} />
             ))}
-        </div>
+            
+        </div>        
     )
 }
 
