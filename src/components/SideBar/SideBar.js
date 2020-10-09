@@ -7,8 +7,6 @@ import { useDataLayerValue } from "../../context/DataLayer"
 
 import "./style.css"
 
-
-
 function SideBar() {
 
     const[{ playlists }, dispatch ] = useDataLayerValue()
@@ -26,10 +24,9 @@ function SideBar() {
             <strong className="sidebar__title"> PLAYLISTS</strong>
             <hr />
 
-            <SideBarOption title='Hip Hop' />
-            <SideBarOption title='Hip Hop' />
-            <SideBarOption title='Hip Hop' />
-            <SideBarOption title='Hip Hop' />
+            { playlists?.items?.map(playlist =>(
+                <SideBarOption title={playlist.name} />
+            ))}
         </div>
     )
 }
