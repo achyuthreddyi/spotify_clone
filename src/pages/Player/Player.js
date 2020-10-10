@@ -22,7 +22,9 @@ function Player({ spotify }) {
                 {/*  Body  */}
             </div>            
             {/* footer */}
-            <Footer />
+            <Footer 
+            spotify
+            />
         </div>
     )
 }
