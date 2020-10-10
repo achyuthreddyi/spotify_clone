@@ -43,14 +43,22 @@ function App() {
             type: 'CREATE_PLAYLISTS',
             playlists: playlists
           })
+        })   
+        
+      spotify.getPlaylist('37i9dQZEVXcW5ASzLSlNA5')
+      .then( response =>{
+        dispatch({
+          type:"SET_DISCOVER_WEEKLY",
+          discover_weekly: response
         })
+      })
         
     }
     console.log(" i have a token ", token);
   },[])
-  console.log("user from the datalayer", user );
-  console.log("data from dataLayer", token );
-  console.log("data from the playlists contect api", playlists);
+  console.log("user from the datalayer", spotify );
+  // console.log("data from dataLayer", token );
+  // console.log("data from the playlists contect api", playlists);
 
 
   return (

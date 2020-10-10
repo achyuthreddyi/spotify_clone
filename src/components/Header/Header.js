@@ -8,7 +8,8 @@ import { useDataLayerValue } from '../../context/DataLayer'
 function Header() {
 
     const [ { user }, dispatch ] = useDataLayerValue()
-
+    
+    console.log("user in hte header", user);
 
     return (
         <div className = "header">
